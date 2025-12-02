@@ -1,5 +1,5 @@
 import { FaUserMd } from 'react-icons/fa'
-import aboutImg from '/Rectangle 10 (1).png'
+import aboutImg from '/Rectangle 10.png'
 
 const About = () => {
   return (
@@ -8,7 +8,7 @@ const About = () => {
       lg:flex-row items-center gap-12'>
         <div className='w-full lg:w-1/2 flex justify-center'>
         <img src={aboutImg} alt="About" 
-        className='w-80 lg:w-[420px] rounded-full shadow-md '/>
+        className='w-80 lg:w-[429px] rounded-full shadow-md object-fit'/>
         </div>
 
         <div className='w-full lg:w-1/2 space-y-6 text-center lg:text-left px-8'>
