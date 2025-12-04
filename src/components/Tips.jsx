@@ -25,7 +25,11 @@ const Tips = () => {
             title: "Stay Hydrated",
             content: "Drinking plenty of water helps wash away food particles and bacteria, and keeps your mouth moist.",
             icon: <GiWaterDrop className='w-8 h-8 text-emerald-500'/>,
-        }
+        },{
+    title: "Use Fluoride Toothpaste",
+    content: "Fluoride strengthens tooth enamel and helps prevent cavities. Make sure your toothpaste contains fluoride.",
+    icon: <FaTooth className='w-8 h-8 text-blue-600'/>,
+}
     ]
   return (
     <section id="tips" className='scroll-mt-20 max-w-6xl mx-auto px-4 py-12'>
