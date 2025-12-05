@@ -111,7 +111,7 @@ const BookAppointment = () => {
                       activeStep >= step ? " text-sky-600" : "text-gray-400"
                     } transition-colors`}
                   >
-                    {["Your Info", "Schedule", "Confirm"][step-1]}
+                    {["Your Info", "Schedule", "Confirm"][step - 1]}
                   </span>
                 </div>
               ))}
@@ -243,58 +243,59 @@ const BookAppointment = () => {
                   <span className="text-gray-600">Name:</span>
                   <span className="font-medium">{formData.name}</span>
                 </div>
-                  <div className="flex justify-between py-2 border-b border-sky-100">
+                <div className="flex justify-between py-2 border-b border-sky-100">
                   <span className="text-gray-600">Phone:</span>
                   <span className="font-medium">{formData.phone}</span>
                 </div>
 
-                  <div className="flex justify-between py-2 border-b border-sky-100">
+                <div className="flex justify-between py-2 border-b border-sky-100">
                   <span className="text-gray-600">Date:</span>
                   <span className="font-medium">{formData.date}</span>
                 </div>
 
-                 <div className="flex justify-between py-2 border-b border-sky-100">
+                <div className="flex justify-between py-2 border-b border-sky-100">
                   <span className="text-gray-600">Time:</span>
                   <span className="font-medium">{formData.time}</span>
                 </div>
 
-                 <div className="flex justify-between py-2 border-b border-sky-100">
+                <div className="flex justify-between py-2 border-b border-sky-100">
                   <span className="text-gray-600">Service:</span>
                   <span className="font-medium">{formData.service}</span>
                 </div>
-
               </div>
-              <button className="w-full max-w-xs py-4 bg-linear-to-r
+              <button
+                className="w-full max-w-xs py-4 bg-linear-to-r
                from-sky-500 to-sky-500 text-white font-bold
                rounded-xl shadow-lg hover:shadow-xl transition-all 
-               transform hover:scale-105  ">
-                Confirm & Book Appointment</button>
+               transform hover:scale-105  "
+              >
+                Confirm & Book Appointment
+              </button>
             </div>
           )}
-          
+
           <div className="px-8 pb-8 flex justify-between">
-                {activeStep > 1 && (
-                    <button onClick={prevStep} 
-                    className="px-6 py-3 text-gray-600 font-medium
+            {activeStep > 1 && (
+              <button
+                onClick={prevStep}
+                className="px-6 py-3 text-gray-600 font-medium
                     rounded-lg hover:bg-gray-100 transition
-                    ">
-                        Back
-                    </button>
-                )}
-                {activeStep < 3 && (
-                    <button
-                    onClick={nextStep}
-                    className="ml-auto px-6 py-3 bg-sky-500 text-white font-medium rounded-lg hover:bg-sky-600
+                    "
+              >
+                Back
+              </button>
+            )}
+            {activeStep < 3 && (
+              <button
+                onClick={nextStep}
+                className="ml-auto px-6 py-3 bg-sky-500 text-white font-medium rounded-lg hover:bg-sky-600
                     transition flex items-center
                     "
-                    >
-                       Next <FaChevronRight className="ml-2"/>
-                    </button>
-                )}
-
+              >
+                Next <FaChevronRight className="ml-2" />
+              </button>
+            )}
           </div>
-
-
         </div>
       </div>
     </div>

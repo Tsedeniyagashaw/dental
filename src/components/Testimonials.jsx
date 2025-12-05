@@ -1,6 +1,10 @@
-
-import React, { useState } from "react";
-import { FaChevronLeft, FaChevronRight, FaQuoteLeft, FaStar } from "react-icons/fa";
+import  { useState } from "react";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaQuoteLeft,
+  FaStar,
+} from "react-icons/fa";
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -102,71 +106,74 @@ const Testimonials = () => {
 
                   <div className="md:w-2/3 md:pl-12">
                     <div className="relative">
-                       <FaQuoteLeft className="text-sky-200 text-4xl absolute -top-2 -left-10" /> 
-                   <p className="text-lg text-gray-700 mb-6 relative z-10 ">
-                    {testimonial.content}
-                   </p>
+                      <FaQuoteLeft className="text-sky-200 text-4xl absolute -top-2 -left-10" />
+                      <p className="text-lg text-gray-700 mb-6 relative z-10 ">
+                        {testimonial.content}
+                      </p>
                     </div>
 
                     <div className="flex items-center justify-between ">
-                        <div>
-                            <h3 className="text-xl font-bold text-sky-800">
-                                 {testimonial.name}
-                            </h3>
-                            <div className="flex mt-1">
-                                {[...Array(5)].map((_,i)=>(
-                                    <FaStar 
-                                    key={i}
-                                    className={`text-lg ${i < testimonial.rating ? 'text-yellow-400' : "text-gray-300"}`}
-                                    />
-                                ))}
-
-                            </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-sky-800">
+                          {testimonial.name}
+                        </h3>
+                        <div className="flex mt-1">
+                          {[...Array(5)].map((_, i) => (
+                            <FaStar
+                              key={i}
+                              className={`text-lg ${
+                                i < testimonial.rating
+                                  ? "text-yellow-400"
+                                  : "text-gray-300"
+                              }`}
+                            />
+                          ))}
                         </div>
-                       
-                        <div className="hidden md:flex space-x-2">
-                          <button
+                      </div>
+
+                      <div className="hidden md:flex space-x-2">
+                        <button
                           className="p-2 rounded-full bg-sky-100 text-sky-600 hover:bg-sky-200 transition-colors"
-                          onClick={prevTestimonial}>
-                            <FaChevronLeft />
-                          </button>
+                          onClick={prevTestimonial}
+                        >
+                          <FaChevronLeft />
+                        </button>
 
-                          <button className="p-2 rounded-full bg-sky-100 text-sky-600 hover:bg-sky-200 transition-colors"
-                          onClick={nextTestimonial}>
-                             <FaChevronRight />
-                          </button>
-                        </div>
-
-
+                        <button
+                          className="p-2 rounded-full bg-sky-100 text-sky-600 hover:bg-sky-200 transition-colors"
+                          onClick={nextTestimonial}
+                        >
+                          <FaChevronRight />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-<div className="flex justify-center mt-8 space-x-4 md:hidden">
-  {testimonials.map((_,index) => (
-        <button key={index} onClick={() => setCurrentIndex(index)}
-        className={`w-3 h-3 rounded-full ${currentIndex === index
-             ? 'bg-sky-600': 'bg-gray-300'}`}
-        >
-
-        </button>
-
-  ))}
-</div>
-
+          <div className="flex justify-center mt-8 space-x-4 md:hidden">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full ${
+                  currentIndex === index ? "bg-sky-600" : "bg-gray-300"
+                }`}
+              ></button>
+            ))}
+          </div>
         </div>
 
-<div className="mt-16 text-center">
-    <button className="px-8 py-3 bg-sky-600 text-white rounded-full
+        <div className="mt-16 text-center">
+          <button
+            className="px-8 py-3 bg-sky-600 text-white rounded-full
     font-medium  hover:bg-sky-700 transition-colors duration-300 shadow-lg hover:shadow-xl
-    ">
+    "
+          >
             Share Your Experience
-    </button>
-
-</div>
-
+          </button>
+        </div>
       </div>
     </section>
   );

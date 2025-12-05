@@ -1,4 +1,12 @@
-import { FaInstagram, FaMapMarkedAlt, FaPhone, FaRegClock, FaTelegram, FaTooth, FaWhatsapp } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaMapMarkedAlt,
+  FaPhone,
+  FaRegClock,
+  FaTelegram,
+  FaTooth,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 
 const socialLinks = [
@@ -39,7 +47,6 @@ const contactInfo = [
 const Footer = () => {
   return (
     <footer className="bg-linear-to-b from-blue-950 to-blue-950 text-white pt-16 pb-12 relative overflow-hidden">
-  
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-cover opacity-20"></div>
 
       <div className="flex flex-col items-center mb-14">
@@ -65,7 +72,6 @@ const Footer = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-     
         <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10 hover:border-sky-300 transition-colors">
           <h3 className="text-xl font-semibold mb-5 flex items-center">
             <FaRegClock className="mr-3 text-sky-300" />
